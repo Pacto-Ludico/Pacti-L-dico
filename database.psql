@@ -1,0 +1,25 @@
+heroku pg:psql postgresql-rugged-15695 --app heroku-try-bd
+
+CREATE TABLE estado(
+    idestado serial primary key,
+    nombre varchar
+);
+
+delete from jugador
+  where idjugador=2;
+
+ALTER TABLE tablaAPonerForanea ADD CONSTRAINT nombre FOREIGN KEY (columnaDelaForanea) REFERENCES tabladelaprimaria(columnadeprimaria)
+
+INSERT INTO jugador (n_id, correo, contraseña, nombre, fecha_nac, puntaje_hab, puntaje_rep) VALUES ('danny', 'da.lopez@udla.edu.co');
+
+select * from usuarios
+
+ALTER TABLE nombre_actual RENAME TO nuevo_nombre;
+
+ALTER TABLE nombre_tabla RENAME COLUMN actual_nombre_columna TO nuevo_nombre_columna;
+
+ALTER TABLE nombre_tabla ADD COLUMN nombre_columna tipo_de_dato;
+
+ALTER TABLE nombre_tabla DROP COLUMN nombre_columna;
+
+ALTER TABLE nombre_tabla ALTER COLUMN nombre_columna SET DATA TYPE tipo_de_dato;
